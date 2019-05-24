@@ -1,0 +1,11 @@
+bias.0006.fits
+bias.0007.fits
+bias.0008.fits
+bias.0009.fits
+bias.0010.fits
+bias.0011.fits
+bias.0012.fits
+bias.0013.fits
+bias.0014.fits
+bias.0015.fits
+bias.0016.fits
