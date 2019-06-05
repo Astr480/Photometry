@@ -1,0 +1,100 @@
+Photometry and Data Reduction Questions
+
+(2 pt) QUESTION: Define the bias. Include both a description of what it looks like
+physically, why it occurs, and how we take it into account (how do we remove its effect
+on our data images?)
+---Bias is a image that is taken with no exposure time. It is supposed to be fully black
+but will usually have spots that are not. We take this image and subtract it form the images
+we gather in order to account for how the pixels vary between each other. 
+
+
+
+(1 pt) QUESTION: Why would we use more than one bias frame? 
+---We take more than one bias frame and take the median so that we can subtract all artifacts from
+the image we want. This is so that we can reduce the noise given off by the bias frame.
+
+(1 pt) QUESTION: List the average value of each of your bias frames, as well as your final
+master bias. 
+---Bias file averages:
+351.70354319927594
+351.3568139518693
+351.65315007774245
+351.7383458262746
+351.675116381611
+351.7116537095913
+351.40129446984287
+351.67762200923625
+351.6943257292706
+351.5752312547864
+351.4999043883874
+
+Master Bias Average:
+351.4886535471444 
+
+(1 pt) QUESTION: Define “overscan”.
+---Overscan is where the computer tries to read data from part of the detector that does not exist. Since there is no detector, there will
+be no light that is read and as such will produce black lines on the edge of the image.
+
+(1 pt) QUESTION: List your overscan parameters here.
+From 1023 to 1077 on the x-axis is overscan. Additionally, from 1023 to 1027 in the
+y-axis there is also an overscan area.
+
+(1 pt) QUESTION: Which filters do you have flat fields for? List the flat field file names for
+each filter.
+I have flats for both the Wash M and J-C Rc filters
+Wash M filter: Flat.0005 to Flat.0016
+J-C Rc: Flat.0016 to Flat.0041
+
+
+(1 pt) QUESTION: Why do we need flat fields for each filter we have used for
+observations?
+We use flat fields for each filter because each filter will be unique in the way it changes the light. For example, if one filter
+happens to have dust while another does not, we will need a flat in order to compensate for the dust seen. Since there
+ are multiple filters that will be used, we will need a flat for each one.
+
+(1 pt) QUESTION: What drawbacks could exist from this method of sky subtraction?
+
+
+(1 pt) QUESTION: Why does sky subtraction matter?
+
+
+
+(1 PT) Question: How many objects did you identify with DAOStarFinder? Look at your
+image. Do you think that’s a reasonable number? What did you change to adjust the
+number of stars detected? How many stars did you end up with?
+With DAO, I detected 212 stars. From the image this seems pretty reasonable. Most of
+the objects the star finder picked up tended to be at stars. I adjusted the two main
+parameters (threshold and fwhm)
+
+(1 pt) QUESTION: Are you happy with your apertures? Why or why not? Save the list of
+sources for comparison. Why did you choose the method (center, exact, subpixel) to
+solve the square pixel/round aperture problem?
+I am decently happy with my apertures. They seem to be fairly accurate and tend to cover
+most of the stars in the image.
+
+Pick your object aperture and write it here: CircularAnnulus
+Pick your sky annulus minimum and maximum and write it here: 3 (min) and 10 (max)
+
+
+(1 pt) QUESTION: Make a plot comparing the measurements of the two different
+methods.
+
+
+(1 pt) QUESTION: Make a plot comparing the PSF fitting output to the aperture output.
+Are they the same? Why or why not?
+
+
+(3 pt) QUESTION: Summarize your experience with this lab. What was your main take
+away? What was particularly challenging?
+---The main takeaways from this lab was using bias and flats. I had a pretty rough
+understanding of both bias and flat. However, having to use each of the images in
+a more hands on way, made my understanding of both bias and flat much easier. It was also
+helpful to work with the photometry part of the lab. I found it to be much harder than the
+data reduction. The challenge in the photometry was mainly the code. There was a lot of
+objects and classes that I needed to work with that was completely new to me. Because of this,
+I had a much harder time working with photometry. Especially with the PSF.
+
+(2 pt) QUESTION: Did you prefer PSF fitting or aperture photometry? Think of one
+situation that you think would be best for each method.
+---I personally liked aperture photometry more than PSF fitting. It was much easier to see where
+we got the numbers from than in PSF.
